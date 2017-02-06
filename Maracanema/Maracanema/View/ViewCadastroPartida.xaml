@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maracanema.View.ViewCadastroPartida">
+
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout Padding="20" Spacing="20">
+        <Label Text="Cadastro de Jogos" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="Data Partida:"  />
+        <DatePicker x:Name="DtPartida" Date="{Binding EntidadeAtual.DtPartida}" />
+        <Label Text="Time Verde:"  />
+        <Entry Text="{Binding EntidadeAtual.NuPlacarTimeA}" Keyboard="Numeric"/>
+        <Label Text="Time Amarelo:"  />
+        <Entry Text="{Binding EntidadeAtual.NuPlacarTimeB}" Keyboard="Numeric"/>
+        <Button x:Name="btnSalvar" Text="Salvar" Command="{Binding SalvarCommand}" />
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+
+
+</ContentPage>

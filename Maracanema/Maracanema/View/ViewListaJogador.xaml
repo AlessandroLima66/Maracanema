@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maracanema.View.ViewListaJogador">
+
+  <ContentPage.Content>
+    <StackLayout Padding="20" Spacing="20">
+      <Label Text="Lista de Jogadores" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+      <ListView ItemsSource="{Binding Jogadores}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding NmJogador}" />
+                <Label Text="{Binding NmPosicao}" HorizontalOptions="EndAndExpand" />
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <Button x:Name="btnCadastro" Text="Add Jogador" Command="{Binding AbrirCadastroCommand}" />
+    </StackLayout>    
+  </ContentPage.Content>
+  
+</ContentPage>
